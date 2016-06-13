@@ -354,7 +354,7 @@ for (i in 1:11)
                               , mort.j=.mort.j, mort.f=.mort.f, mort.m=.mort.m, bt.amt=.bt.amt
                               , release1=.release1, release2=.release2, release3=.release3
                               , release4=.release4, release5=.release5, release6=.release6 
-                              , release7=.release7, release8=.release8, release9=.release9, M9=.m9
+                              , release7=.release7, release8=.release8, release9=.release9,
                               , leaky=.leaky, emergence=.emergence
                               , viability1=.viability1, viability2=.viability2, viability3=.viability3
                               , viability4=.viability4, viability5=.viability5, viability6=.viability6 
@@ -503,8 +503,8 @@ for (i in 1:11)
           - state[1] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[1]) - (emergence * state[1])
           )
-          df1 <- 365*((0.5 * emergence * viability1 * j1) - (mort.f * state[10]) + (release1*leaky*M9/7))
-          dm1 <- 365*((0.5 * emergence * j1) - (mort.m * state[19]) + (release1*M9/7))
+          df1 <- 365*((0.5 * emergence * viability1 * j1) - (mort.f * state[10]) + (release1*leaky*.m9/7))
+          dm1 <- 365*((0.5 * emergence * j1) - (mort.m * state[19]) + (release1*.m9/7))
           
           ### Differential Equations for Genotype 2: KKSs
           dj2 <- 365*((fitness2 * theta2 * larval.prod *
@@ -629,8 +629,8 @@ for (i in 1:11)
           )
           - state[2] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[2]) - (emergence * state[2]))
-          df2 <- 365*((0.5 * emergence * viability2 * j2) - (mort.f * state[11]) + (release2*leaky*M9/7))
-          dm2 <- 365*((0.5 * emergence * j2) - (mort.m * state[20]) + (release2*M9/7))
+          df2 <- 365*((0.5 * emergence * viability2 * j2) - (mort.f * state[11]) + (release2*leaky*.m9/7))
+          dm2 <- 365*((0.5 * emergence * j2) - (mort.m * state[20]) + (release2*.m9/7))
           
           ### Differential Equations for Genotype 3: KKss
           dj3 <- 365*((fitness3 * theta3 * larval.prod *
@@ -755,8 +755,8 @@ for (i in 1:11)
           )
           - state[3] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[3]) - (emergence * state[3]))
-          df3 <- 365*((0.5 * emergence * viability3 * j3) - (mort.f * state[12]) + (release3*leaky*M9/7))
-          dm3 <- 365*((0.5 * emergence * j3) - (mort.m * state[21]) + (release3*M9/7))
+          df3 <- 365*((0.5 * emergence * viability3 * j3) - (mort.f * state[12]) + (release3*leaky*.m9/7))
+          dm3 <- 365*((0.5 * emergence * j3) - (mort.m * state[21]) + (release3*.m9/7))
           
           ### Differential Equations for Genotype 4: KkSS
           dj4 <- 365*((fitness4 * theta4 * larval.prod *
@@ -881,8 +881,8 @@ for (i in 1:11)
           )
           - state[4] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[4]) - (emergence * state[4]))
-          df4 <- 365*((0.5 * emergence * viability4 * j4) - (mort.f * state[13]) + (release4*leaky*M9/7))
-          dm4 <- 365*((0.5 * emergence * j4) - (mort.m * state[22]) + (release4*M9/7))
+          df4 <- 365*((0.5 * emergence * viability4 * j4) - (mort.f * state[13]) + (release4*leaky*.m9/7))
+          dm4 <- 365*((0.5 * emergence * j4) - (mort.m * state[22]) + (release4*.m9/7))
           
           ### Differential Equations for Genotype 5: KkSs
           dj5 <- 365*((fitness5 * theta5 * larval.prod *
@@ -1007,8 +1007,8 @@ for (i in 1:11)
           )
           - state[5] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[5]) - (emergence * state[5]))
-          df5 <- 365*((0.5 * emergence * viability5 * j5) - (mort.f * state[14]) + (release5*leaky*M9/7))
-          dm5 <- 365*((0.5 * emergence * j5) - (mort.m * state[23]) + (release5*M9/7))
+          df5 <- 365*((0.5 * emergence * viability5 * j5) - (mort.f * state[14]) + (release5*leaky*.m9/7))
+          dm5 <- 365*((0.5 * emergence * j5) - (mort.m * state[23]) + (release5*.m9/7))
           
           ### Differential Equations for Genotype 6: Kkss
           dj6 <- 365*((fitness6 * theta6 * larval.prod *
@@ -1133,8 +1133,8 @@ for (i in 1:11)
           )
           - state[6] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[6]) - (emergence * state[6]))
-          df6 <- 365*((0.5 * emergence * viability6 * j6) - (mort.f * state[15]) + (release6*leaky*M9/7))
-          dm6 <- 365*((0.5 * emergence * j6) - (mort.m * state[24]) + (release6*M9/7))
+          df6 <- 365*((0.5 * emergence * viability6 * j6) - (mort.f * state[15]) + (release6*leaky*.m9/7))
+          dm6 <- 365*((0.5 * emergence * j6) - (mort.m * state[24]) + (release6*.m9/7))
           
           ### Differential Equations for Genotype 7: kkSS
           dj7 <- 365*((fitness7 * theta7 * larval.prod *
@@ -1259,8 +1259,8 @@ for (i in 1:11)
           )
           - state[7] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[7]) - (emergence * state[7]))
-          df7 <- 365*((0.5 * emergence * viability7 * j7) - (mort.f * state[16]) + (release7*leaky*M9/7))
-          dm7 <- 365*((0.5 * emergence * j7) - (mort.m * state[25]) + (release7*M9/7))
+          df7 <- 365*((0.5 * emergence * viability7 * j7) - (mort.f * state[16]) + (release7*leaky*.m9/7))
+          dm7 <- 365*((0.5 * emergence * j7) - (mort.m * state[25]) + (release7*.m9/7))
           
           ### Differential Equations for Genotype 8: kkSs
           dj8 <- 365*((fitness8 * theta8 * larval.prod *
@@ -1385,8 +1385,8 @@ for (i in 1:11)
           )
           - state[8] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[8]) - (emergence * state[8]))
-          df8 <- 365*((0.5 * emergence * viability8 * j8) - (mort.f * state[17]) + (release8*leaky*M9/7))
-          dm8 <- 365*((0.5 * emergence * j8) - (mort.m * state[26]) + (release8*M9/7))
+          df8 <- 365*((0.5 * emergence * viability8 * j8) - (mort.f * state[17]) + (release8*leaky*.m9/7))
+          dm8 <- 365*((0.5 * emergence * j8) - (mort.m * state[26]) + (release8*.m9/7))
           
           ### Differential Equations for Genotype 9: kkss (aka: wild-type)
           dj9 <- 365*((fitness9 * theta9 * larval.prod *
@@ -1511,8 +1511,8 @@ for (i in 1:11)
           )
           - state[9] * (dens * sum(state[1:9]))^(strength.dens - 1)
           - (mort.j * state[9]) - (emergence * state[9]))
-          df9 <- 365*((0.5 * emergence * viability9 * j9) - (mort.f * state[18]) + (release9*leaky*M9/7))
-          dm9 <- 365*((0.5 * emergence * j9) - (mort.m * state[27]) + (release9*M9/7))
+          df9 <- 365*((0.5 * emergence * viability9 * j9) - (mort.f * state[18]) + (release9*leaky*.m9/7))
+          dm9 <- 365*((0.5 * emergence * j9) - (mort.m * state[27]) + (release9*.m9/7))
           
           ##Economics links
           #Damage per insect (was originally "alpha=0.8/(carrying capacity)" in Zack's)
