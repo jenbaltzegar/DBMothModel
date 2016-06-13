@@ -4,7 +4,7 @@
 # Purpose: to evaluate the benefits and potential implications of
 # simultaneously using sex-specific GPM and Bt-crops
 ###################################################################################################
-###################################
+#################################
 # Clear Global Environment Before Script Run
 rm(list = ls())
 
